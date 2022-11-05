@@ -8,7 +8,7 @@ function Avatar({ body, eyes, hats, clothes1, clothes2, clothes3, mouth, glasses
         <div className="avatar">
 			<Item path="body" index={body} zIndex={0} />
 			<Item path="eyes" index={eyes} zIndex={1} />
-			<Item path="accessories\hats" index={hats} zIndex={6} />
+			<Item path="accessories/hats" index={hats} zIndex={6} />
 			<Item path="clothes/layer_1" index={clothes1} zIndex={2} />
 			<Item path="clothes/layer_2" index={clothes2} zIndex={3} />
 			<Item path="clothes/layer_3" index={clothes3} zIndex={4} />
