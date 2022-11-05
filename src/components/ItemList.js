@@ -1,12 +1,19 @@
+import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 import React from 'react'
+import ItemListContent from './ItemListContent';
+import { ImgItem } from './styles';
 
 function ItemList({ total, path, set, selected }) {
   let parts = [];
+  
 	for (let i = 0; i < total; i++) {
 		parts.push(
-			<div key={path + i} className={selected === i ? 'selected clickable square' : 'clickable square'} onClick={() => set(i)}>
-				<img src={`/character/${path}/${i + 1}.png`} alt="" className="img-center height60 top50" />
-			</div>
+			<ItemListContent path={`${path}/${i+1}`} selected={selected === i} setSelected={() => set(i)}></ItemListContent>
+
+
+			// <div key={path + i} className={selected === i ? 'selected clickable square' : 'clickable square'} onClick={() => set(i)}>
+			// 	<ImgItem src={`/character/${path}/${i + 1}.png`} alt="" />
+			// </div>
 		);
 	};
 
